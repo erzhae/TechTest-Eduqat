@@ -1,0 +1,49 @@
+{
+    "courses": [
+      {
+        "id": 1,
+        "name": "Introduction to Computer Science",
+        "description": "An introductory course to the fundamentals of computer science.",
+        "details": {
+          "instructor": "John Doe",
+          "duration": "12 weeks",
+          "level": "Beginner",
+          "topics": [
+            "Programming Basics",
+            "Data Structures and Algorithms",
+            "Object-Oriented Programming"
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "name": "Web Development",
+        "description": "A course on developing web applications using modern web technologies.",
+        "details": {
+          "instructor": "Jane Smith",
+          "duration": "8 weeks",
+          "level": "Intermediate",
+          "topics": [
+            "HTML and CSS",
+            "JavaScript and jQuery",
+            "Server-Side Development with Node.js"
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "name": "Mobile App Development",
+        "description": "A course on developing mobile apps for iOS and Android platforms.",
+        "details": {
+          "instructor": "Bob Johnson",
+          "duration": "10 weeks",
+          "level": "Advanced",
+          "topics": [
+            "iOS App Development with Swift",
+            "Android App Development with Kotlin",
+            "API Integration and Data Persistence"
+          ]
+        }
+      }
+    ]
+  }

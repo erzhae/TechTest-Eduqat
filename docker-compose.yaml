@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:15
+    environment:
+      POSTGRES_DB: course_db
+      POSTGRES_USER: course_svc
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    volumes:
+       - postgres-db:/data/postgres
+    ports:
+      - "54320:5432"
+
+volumes:
+  postgres-db:
+    driver: local

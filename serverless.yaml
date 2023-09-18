@@ -1,0 +1,38 @@
+service: courseService
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  createCourse:
+    handler: handlers/createCourse.createCourse
+    events:
+      - http:
+          method: post
+          path: /courses
+  deleteCourse:
+    handler: handlers/deleteCourse.deleteCourse
+    events:
+      - http:
+          method: delete
+          path: /courses/{id}
+  updateCourse:
+    handler: handlers/updateCourse.updateCourse
+    events:
+      - http:
+          method: put
+          path: /courses/{id}
+  listCourse:
+    handler: handlers/listCourse.listCourse
+    events:
+      - http:
+          method: get
+          path: /courses
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 3000

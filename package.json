@@ -1,0 +1,27 @@
+{
+  "name": "eduqat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrate:create": "knex migrate:make $1 --knexfile ./database/knexfile.js",
+    "migrate:local": "knex migrate:latest --env local --knexfile ./database/knexfile.js",
+    "prestart": "docker-compose up -d && npm run migrate:local",
+    "start": "npm run prestart && sls offline"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "volta": {
+    "node": "18.17.1"
+  },
+  "dependencies": {
+    "knex": "^2.5.1",
+    "pg": "^8.11.3",
+    "serverless": "^3.35.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "serverless-offline": "^12.0.4"
+  }
+}
